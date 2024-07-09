@@ -1,0 +1,2302 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<!-- 看板娘位置 -->
+<style>
+#waifu{
+    left: auto !important;
+    right: 50px !important;
+}
+</style>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="8.面向对象(高级), HTML,CSS,JavaScript,JQuery,java,c++,linux等">
+    <meta name="description" content="个人的博客，用于记录日常生活兴趣爱好、总结分享经验">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>8.面向对象(高级) | junmtdh</title>
+    <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+
+
+
+<!-- 样式一（鼠标点击更换样式）
+<script src="https://g.joyinshare.com/hc/ribbon.min.js" type="text/javascript"></script>
+<!-- 样式二（飘动的彩带） -->
+<!-- <script src="https://g.joyinshare.com/hc/piao.js" type="text/javascript"></script> --> -->
+<!--动态线条背景-->
+<script type="text/javascript"
+color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+
+    <!-- 天气 -->
+    <script type="text/javascript">
+        WIDGET = {FID: '1tFpFZ5Mtj'}
+    </script>
+    <script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+    
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">junmtdh</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于我</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/secret" class="waves-effect waves-light">
+      
+      <i class="fas fa-location-arrow" style="zoom: 0.6;"></i>
+      
+      <span>另一个我</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>菜单</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/photo">
+          
+          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>相册</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/navigate">
+          
+          <i class="fas fa-location-arrow" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>导航</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/books">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Books</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/linuxhome">
+          
+          <i class="fa fa-house-damage" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>个人主页</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">junmtdh</div>
+        <div class="logo-desc">
+            
+            个人的博客，用于记录日常生活兴趣爱好、总结分享经验
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于我
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/secret" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-location-arrow"></i>
+			
+			另一个我
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			菜单
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/photo " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-image" style="position: absolute;left:28px" ></i>
+			      
+		          <span>相册</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/navigate " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-location-arrow" style="position: absolute;left:28px" ></i>
+			      
+		          <span>导航</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/books " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:28px" ></i>
+			      
+		          <span>Books</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/linuxhome " style="margin-left:50px">
+				  
+				   <i class="fa fa fa-house-damage" style="position: absolute;left:28px" ></i>
+			      
+		          <span>个人主页</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/junmtdh" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/junmtdh" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">8.面向对象(高级)</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    /* .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    } */
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+        background-color: rgb(255, 255, 255,0.7);
+        border-radius: 10px;
+        box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/java/">
+                                <span class="chip bg-color">java</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/java%E5%9F%BA%E7%A1%80/" class="post-category">
+                                java基础
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-06-25
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    6.5k
+                </div>
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="8-面向对象-高级"><a href="#8-面向对象-高级" class="headerlink" title="8 面向对象(高级)"></a>8 面向对象(高级)</h1><h2 id="8-1类变量和类方法⭐️"><a href="#8-1类变量和类方法⭐️" class="headerlink" title="8.1类变量和类方法⭐️"></a>8.1类变量和类方法⭐️</h2><h3 id="8-1-1类变量"><a href="#8-1-1类变量" class="headerlink" title="8.1.1类变量"></a>8.1.1类变量</h3><ul>
+<li><h4 id="基本介绍："><a href="#基本介绍：" class="headerlink" title="基本介绍："></a>基本介绍：</h4><p>类变量也叫静态变量/静态属性，是该类的所有对象共享的变量,任何一个该类的对象去访问它时,取到的都是相同的值,同样任何一个该类的对象去修改它时,修改的也是同一个变量</p>
+</li>
+<li><h4 id="基本语法："><a href="#基本语法：" class="headerlink" title="基本语法："></a>基本语法：</h4><pre class="language-java" data-language="java"><code class="language-java">访问修饰符 <span class="token keyword">static</span> 数据类型 变量名<span class="token punctuation">;</span>
+<span class="token keyword">static</span> 访问修饰符 数据类型 变量名<span class="token punctuation">;</span></code></pre></li>
+<li><h4 id="如何访问类变量："><a href="#如何访问类变量：" class="headerlink" title="如何访问类变量："></a>如何访问类变量：</h4><ol>
+<li>类名.类变量名</li>
+<li>对象名.类变量名</li>
+<li>静态变量的访问修饰符的访问权限和范围和普通属性是一样的</li>
+</ol>
+</li>
+<li><h4 id="内存布局："><a href="#内存布局：" class="headerlink" title="内存布局："></a>内存布局：</h4></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/zhi7xuan/project/article_picture/8-1.jpg">  </p>
+<ul>
+<li><h4 id="注意事项和细节："><a href="#注意事项和细节：" class="headerlink" title="注意事项和细节："></a>注意事项和细节：</h4><ol>
+<li>需要让某个类的所有对象都共享一个变量时，就可以考虑使用类变量(静态变量)</li>
+<li>类变量是该类的所有对象共享的，而实例变量是每个对象独享的</li>
+<li>加上static称为类变量或静态变量，否则称为实例变量/普通变量/非静态变量</li>
+<li>类变量可以通过 类名.类变量名 或者 对象名.类变量名 来访问</li>
+<li>实例变量不能通过 类名.类变量名 方式访问</li>
+<li>类变量是在类加载时就初始化</li>
+<li>类变量的生命周期是随类的加载开始，随着类消亡而销毁</li>
+</ol>
+</li>
+</ul>
+<h3 id="8-1-2类方法"><a href="#8-1-2类方法" class="headerlink" title="8.1.2类方法"></a>8.1.2类方法</h3><ul>
+<li><h4 id="基本介绍：-1"><a href="#基本介绍：-1" class="headerlink" title="基本介绍："></a>基本介绍：</h4><p>类方法也叫静态方法</p>
+</li>
+<li><h4 id="基本语法：-1"><a href="#基本语法：-1" class="headerlink" title="基本语法："></a>基本语法：</h4><pre class="language-java" data-language="java"><code class="language-java">访问修饰符 <span class="token keyword">static</span> 数据返回类型 方法名<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token keyword">static</span> 访问修饰符 数据返回类型 方法名<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre></li>
+<li><h4 id="类方法调用："><a href="#类方法调用：" class="headerlink" title="类方法调用："></a>类方法调用：</h4><ol>
+<li>类名.类方法名</li>
+<li>对象名.类方法名</li>
+<li> 满足访问修饰符的访向权限和范围</li>
+</ol>
+</li>
+<li><h4 id="使用场景："><a href="#使用场景：" class="headerlink" title="使用场景："></a>使用场景：</h4><ol>
+<li>当方法中不涉及到任何和对象相关的成员，则可以将方法设计成静态方法,提高开发效率</li>
+<li>程序员实际开发，往往会将一些通用的方法，设计成静态方法，这样我们不需要创建对象就可以使用</li>
+</ol>
+</li>
+<li><h4 id="注意事项和细节：-1"><a href="#注意事项和细节：-1" class="headerlink" title="注意事项和细节："></a>注意事项和细节：</h4><ol>
+<li>类方法和普通方法都是随着类的加载而加载，将结构信息存储在方法区：<br>类方法中无this的参数，普通方法中隐含着this的参数</li>
+<li>类方法可以通过类名调用，也可以通过对象名调用</li>
+<li>音通方法和对象有关，需要通过对象名调用，比如对象名.方法名(参数)，不能通过类名调用</li>
+<li>类方法中不允许使用和对象有关的关键字，比如this和super</li>
+<li><strong>静态方法，只能访问静态的成员，非静态的方法，可以访问静态成员和非静态成员</strong></li>
+</ol>
+</li>
+</ul>
+<h2 id="8-2-main方法"><a href="#8-2-main方法" class="headerlink" title="8.2  main方法"></a>8.2  main方法</h2><ul>
+<li><h4 id="深入理解main方法："><a href="#深入理解main方法：" class="headerlink" title="深入理解main方法："></a>深入理解main方法：</h4><ol>
+<li>java虛拟机需要调用类的main0方法，所以该方法的访问权限化须是public</li>
+<li>java虚拟机在执行main0方法时不必创建对象，所以该方法心须是static</li>
+<li>该方法接收String类型的数组参数，该数组中保存执行java命令时传递给所运行的类的参数</li>
+<li>java 执行的程序 参数1 参数2 参数3</li>
+</ol>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/zhi7xuan/project/article_picture/8-2.jpg"></p>
+<ul>
+<li><h4 id="注意事项和细节：-2"><a href="#注意事项和细节：-2" class="headerlink" title="注意事项和细节："></a>注意事项和细节：</h4><ol>
+<li>在main()方法中，我们可以直接调用main方法所在类的静态方法或静态属性</li>
+<li>但是，不能直接访问该类中的非静态成员，必须创建该类的一个实例对象后，才能通过这个对象去访问类中的目静态成员</li>
+</ol>
+</li>
+</ul>
+<h2 id="8-3代码块"><a href="#8-3代码块" class="headerlink" title="8.3代码块"></a>8.3代码块</h2><ul>
+<li><h4 id="基本介绍：-2"><a href="#基本介绍：-2" class="headerlink" title="基本介绍："></a>基本介绍：</h4><p>代码化块又称为初始化块,属于类中的成员，类似于方法，将逻辑语句封装在方法体中，通过们包围起来。但和方法不同，没有方法名，没有返回，没有参数，只有方法体，而且不用通过对象或类显式调用，而是加载类时，或创建对象时隐式调用</p>
+</li>
+<li><h4 id="基本语法：-2"><a href="#基本语法：-2" class="headerlink" title="基本语法："></a>基本语法：</h4><pre class="language-java" data-language="java"><code class="language-java"><span class="token punctuation">[</span>修饰符<span class="token punctuation">]</span><span class="token punctuation">&#123;</span>
+  代码<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code></pre></li>
+<li><h4 id="注释："><a href="#注释：" class="headerlink" title="注释："></a>注释：</h4><ol>
+<li>修饰符 可选，要写的话，也只能写 static</li>
+<li>代码块分为两类，使用static 修饰的叫静态代码块，没有static修饰的，叫普通代码块</li>
+<li>逻辑语句可以为任何逻辑语句</li>
+<li>：号可以写上，也可以省略</li>
+</ol>
+</li>
+<li><h4 id="注意事项和细节：-3"><a href="#注意事项和细节：-3" class="headerlink" title="注意事项和细节："></a>注意事项和细节：</h4><ol>
+<li>static代码块是类加载时执行，且只会执行一次</li>
+<li>普通代码块是在创建对象的调用的，创建一次，调用一次</li>
+<li>类什么时候被加载⭐️⭐️：<ul>
+<li>创建对象实例时</li>
+<li>创建子类对象实例时，父类也会被加载</li>
+<li>使用类的静态成员时</li>
+</ul>
+</li>
+<li>创建一个<strong>对象</strong>时，在一个类的调用<strong>顺序</strong>：<ul>
+<li>调用静态代码块和静态属性初始化(注意：静态代码块和静态属性初始化调用的优先级样，如果有多个静态代码块和多个静<br>态变量初始化，则按他们定义的顺序调</li>
+<li>调用普通代码块和普通属性的初始化(注意：普通代码块和普通属性初始化调用的优先级一样，若果有多个普通代码块和stat多个普通属性初始化，则按定义顺序调用)</li>
+<li>调用构造器</li>
+</ul>
+</li>
+<li>构造方法(构造器)的最前面其实隐含了 super()和调用普通代码块</li>
+<li><strong>创建子类时顺序</strong>⭐️⭐️：<ul>
+<li>父类的静态代码块和静态属性(优先级一样，按定义顺序执行)</li>
+<li>子类的静态代码块和静态属性(优先级一样，按定义顺序执行)</li>
+<li>父类的普通代码块和普通属性初始化(优先级一样，按定义顺序执行)</li>
+<li>父类构造方法</li>
+<li>子类的普通代码块和普通属性初始化(优先级一样，按定义顺序执行)</li>
+<li>子类构造方法</li>
+</ul>
+</li>
+<li>静态代码块只能直接调用静态成员(静态属性和静态方法)，普通代码块可以调用任意成员</li>
+</ol>
+</li>
+</ul>
+<h2 id="8-4单例设计模式"><a href="#8-4单例设计模式" class="headerlink" title="8.4单例设计模式"></a>8.4单例设计模式</h2><ul>
+<li><h4 id="基本介绍：-3"><a href="#基本介绍：-3" class="headerlink" title="基本介绍："></a>基本介绍：</h4><p>就是采取一定的方法保证在整个的软件系统中，对某个类只能存在一个对象实例，并且该类只提供一个取得其对象实例的方法</p>
+<p>单例模式有两种方式：1. 饿汉式  2.懒汉式</p>
+</li>
+<li><h4 id="饿汉式："><a href="#饿汉式：" class="headerlink" title="饿汉式："></a>饿汉式：</h4><ol>
+<li><p>构造器私有化</p>
+</li>
+<li><p>类的内部创建静态对象</p>
+</li>
+<li><p>向外暴露一个静态公共方法</p>
+</li>
+<li><p>特点：在类加载的时候就创建对象实例，可能存在资源浪费</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">GirlFriend</span><span class="token punctuation">&#123;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">GirlFriend</span> gf <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GirlFriend</span><span class="token punctuation">(</span><span class="token string">"小花"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">GirlFriend</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">GirlFriend</span> <span class="token class-name">Instance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> gf<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre></li>
+</ol>
+</li>
+<li><h4 id="懒汉式："><a href="#懒汉式：" class="headerlink" title="懒汉式："></a>懒汉式：</h4><ol>
+<li><p>构造器私有化</p>
+</li>
+<li><p>定义一个static静态属性对象</p>
+</li>
+<li><p>提供一个public的static方法，返回一个对象</p>
+</li>
+<li><p>只有当使用(3)的方法时，才返回对象，再次调用时，返回上次创建的对象</p>
+</li>
+<li><p>特点：线程安全问题</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Cat</span><span class="token punctuation">&#123;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">Cat</span> cat<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">Cat</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">Cat</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>cat <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+            cat <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Cat</span><span class="token punctuation">(</span><span class="token string">"小花"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+        <span class="token keyword">return</span> cat<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre></li>
+</ol>
+</li>
+<li><h4 id="对比："><a href="#对比：" class="headerlink" title="对比："></a>对比：</h4><ol>
+<li>最主要的区别在于创建对象的时机不同：饿汉式是在类加载就创建了对象实例，而懒汉式是在使用时才创建</li>
+<li>饿汉式不存在线程安全问题，徽汉式存在线程安全问题</li>
+<li>饿汉式存在浪费姿源的可能，对象实例都没有使用，那么饿汉式创建的对象就浪费，懒汉式是使用时才创建，就不存在这个问题</li>
+</ol>
+</li>
+</ul>
+<h2 id="8-5-final"><a href="#8-5-final" class="headerlink" title="8.5  final"></a>8.5  final</h2><ul>
+<li><h4 id="基本介绍：-4"><a href="#基本介绍：-4" class="headerlink" title="基本介绍："></a>基本介绍：</h4><ul>
+<li><p>final可以修饰类、属性、方法、局部变量</p>
+</li>
+<li><p>final 类，类不能被继承</p>
+</li>
+<li><p>final 方法，子类无法重写方法</p>
+</li>
+<li><p>final 属性，属性无法被修改</p>
+</li>
+<li><p>final 局部变量，局部变量无法被修改</p>
+</li>
+</ul>
+</li>
+<li><h4 id="注意事项和细节：-4"><a href="#注意事项和细节：-4" class="headerlink" title="注意事项和细节："></a>注意事项和细节：</h4><ol>
+<li>final修饰的属性又叫常量，一般用XX_XX_XX 来命名</li>
+<li>final<strong>修饰的属性在定义时</strong>,必须赋初值,并且以后不能再修改，赋值可以在如下位置：<br><strong>定义时、构造器、代码块</strong></li>
+<li>final修饰的属性是静态的，则初始化的位置只能是 定义时、静态代码块</li>
+<li>final类不能继承，但可以实例化对象</li>
+<li>如果类不是final类，但是含有final方法，则该方法虽然不能重写，但是可以被继承</li>
+<li>如果一个类已经是final类了，就没有必要再将方法修饰成final方法</li>
+<li>final不能修饰构造器本身</li>
+<li>final 和static 往往搭配使用，效率更高，不会导致类加载-底层编译器做了优化处理</li>
+<li>包装类(Integer, Double,Float,Boolean等都是final)，String也是final类</li>
+</ol>
+</li>
+</ul>
+<h2 id="8-6抽象类"><a href="#8-6抽象类" class="headerlink" title="8.6抽象类"></a>8.6抽象类</h2><ul>
+<li><h4 id="基本介绍：-5"><a href="#基本介绍：-5" class="headerlink" title="基本介绍："></a>基本介绍：</h4><ul>
+<li><p>用abstract 关键字来修饰一个类时,这个类就叫抽象类</p>
+</li>
+<li><p>用abstract 关键字来修饰一个方法时,这个方法就是抽象方法，没有方法体</p>
+</li>
+<li><p>抽象类的价值更多作用是在于设计，是设计者设计好后，让子类继承并实现抽象类</p>
+</li>
+</ul>
+</li>
+<li><h4 id="注意事项和细节：-5"><a href="#注意事项和细节：-5" class="headerlink" title="注意事项和细节："></a>注意事项和细节：</h4><ol>
+<li>抽象类不能被实例化</li>
+<li>抽象类不一定要包含abstract方法。也就是说,抽象类可以没有abstract方法</li>
+<li>一旦类包含了abstract方法,则这个类必须声明为abstract</li>
+<li>abstract 只能修饰类和方法</li>
+<li>抽象类可以有任意成员，抽象类本质还是类</li>
+<li>抽象方法不能有主体</li>
+<li>如果一个类继承了抽象类，则它必须实现抽象类的所有的抽象方法，除非它自己也声明为abstract类</li>
+<li>抽象方法不能使用private、final 和static来修饰，因为这些关键字都是和重写相违背的</li>
+</ol>
+</li>
+<li><h4 id="抽象类模版设计模式"><a href="#抽象类模版设计模式" class="headerlink" title="抽象类模版设计模式"></a>抽象类模版设计模式</h4><ol>
+<li>编写方法cal()，可以计算某段代码的耗时时间</li>
+<li>编写抽象方法job()</li>
+<li>编写一个子类A,继承抽象类Template，井实现job方法</li>
+<li>编写一个测试类TestTemplate,看看是否好用</li>
+</ol>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TextTemplate</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">A</span> a <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">A</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        a<span class="token punctuation">.</span><span class="token function">cal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">B</span> b <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">B</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        b<span class="token punctuation">.</span><span class="token function">cal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">abstract</span> <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Template</span> <span class="token punctuation">&#123;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">job</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">cal</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">long</span> start <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">job</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">long</span> end <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"时间"</span> <span class="token operator">+</span> <span class="token punctuation">(</span>end <span class="token operator">-</span> start<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">A</span> <span class="token keyword">extends</span> <span class="token class-name">Template</span><span class="token punctuation">&#123;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">job</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">long</span> num <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">long</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">10000000</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            num <span class="token operator">+=</span> i<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">B</span> <span class="token keyword">extends</span> <span class="token class-name">Template</span><span class="token punctuation">&#123;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">job</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">long</span> num <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">long</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">10000000</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            num <span class="token operator">*=</span> i<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre></li>
+</ul>
+<h2 id="8-7接口⭐️"><a href="#8-7接口⭐️" class="headerlink" title="8.7接口⭐️"></a>8.7接口⭐️</h2><ul>
+<li><h4 id="基本介绍：-6"><a href="#基本介绍：-6" class="headerlink" title="基本介绍："></a>基本介绍：</h4><p>接口就是给出一些没有实现的方法,封装到一起,到某个类要使用的时候,再根据具体情况把这些方法写出来</p>
+</li>
+<li><h4 id="基本语法：-3"><a href="#基本语法：-3" class="headerlink" title="基本语法："></a>基本语法：</h4><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">interface</span> 接口名<span class="token punctuation">&#123;</span>
+  <span class="token comment">//属性</span>
+  <span class="token comment">//方法</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">class</span> 类名 <span class="token keyword">implements</span> 接口 <span class="token punctuation">&#123;</span>
+  自己属性<span class="token punctuation">;</span>
+  自己方法<span class="token punctuation">;</span>
+  <span class="token comment">//必须实现接口的抽象方法</span>
+<span class="token punctuation">&#125;</span></code></pre>
+
+<ol>
+<li>Jdk7.0前 接口里的所有方法都没有方法体(只能<strong>抽象方法</strong>)</li>
+<li>Jdk8.0后接口类可以有<strong>静态方法，defaut实现方法</strong>，也就是说接口中可以有方法的具体实现</li>
+</ol>
+</li>
+<li><h4 id="注意事项和细节：-6"><a href="#注意事项和细节：-6" class="headerlink" title="注意事项和细节："></a>注意事项和细节：</h4><ol>
+<li>接口不能被实例化</li>
+<li>接口中所有的方法是 public 和 abstrac 方法，接口中抽象方法，可以不用 abstract 修饰</li>
+<li>普通类实现接口，就必须将该接口的所有方法实现</li>
+<li><strong>抽象类实现接口，可以不用实现接口的方法</strong></li>
+<li>一个类同时可以实现多个接口</li>
+<li>接口中的属性,只能是 final 的，而且是 public static final 修饰符</li>
+<li>接口中属性的访问形式：接口名.属性名</li>
+<li>一个接口不能继承其它的类,但是可以继承多个别的接口</li>
+<li>接口的修饰符 只能是 public 和默认，这点和类的修饰符是一样的</li>
+</ol>
+</li>
+<li><h4 id="实现接口VS继承类："><a href="#实现接口VS继承类：" class="headerlink" title="实现接口VS继承类："></a>实现接口VS继承类：</h4><ol>
+<li>继承的价值主要在于：解决代码的复用性和可维护性</li>
+<li>接口的价值主要在于：设计，设计好各种规范(方法)，让其它类去实现这些方法</li>
+<li>接口比继承更加灵活，继承是满足 is -a的关系，而接口只需满足 like-a的关系</li>
+<li>接口在一定程度上实现代码解耦</li>
+</ol>
+</li>
+<li><h4 id="接口类型数组："><a href="#接口类型数组：" class="headerlink" title="接口类型数组："></a>接口类型数组：</h4><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">InterfacePolyArr</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+
+        <span class="token comment">//多态数组 -> 接口类型数组</span>
+        <span class="token class-name">Usb</span><span class="token punctuation">[</span><span class="token punctuation">]</span> usbs <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Usb</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        usbs<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Phone_</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        usbs<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Camera_</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">/*
+        给Usb数组中，存放 Phone 和 相机对象，Phone类还有一个特有的方法call（），
+        请遍历Usb数组，如果是Phone对象，除了调用Usb 接口定义的方法外，
+        还需要调用Phone 特有方法 call
+         */</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> usbs<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            usbs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">work</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//动态绑定..</span>
+            <span class="token comment">//和前面一样，我们仍然需要进行类型的向下转型</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>usbs<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token keyword">instanceof</span> <span class="token class-name">Phone_</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token comment">//判断他的运行类型是 Phone_</span>
+                <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token class-name">Phone_</span><span class="token punctuation">)</span> usbs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">interface</span> <span class="token class-name">Usb</span><span class="token punctuation">&#123;</span>
+    <span class="token keyword">void</span> <span class="token function">work</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">class</span> <span class="token class-name">Phone_</span> <span class="token keyword">implements</span> <span class="token class-name">Usb</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">call</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"手机可以打电话..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">work</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"手机工作中..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">class</span> <span class="token class-name">Camera_</span> <span class="token keyword">implements</span> <span class="token class-name">Usb</span> <span class="token punctuation">&#123;</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">work</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"相机工作中..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+</code></pre></li>
+</ul>
+<h2 id="8-8内部类⭐️"><a href="#8-8内部类⭐️" class="headerlink" title="8.8内部类⭐️"></a>8.8内部类⭐️</h2><ul>
+<li><h4 id="基本介绍：-7"><a href="#基本介绍：-7" class="headerlink" title="基本介绍："></a>基本介绍：</h4><ul>
+<li>一个类的内部又完整的嵌套了另一个类结构，被嵌套的类称为内部类(inner class)，嵌套其他类的类称为外部类(outer class)</li>
+<li>内部类最大的特点就是可以直接访问私有属性，井且可以体现类与类之间的包含关系</li>
+</ul>
+</li>
+<li><h4 id="基本语法：-4"><a href="#基本语法：-4" class="headerlink" title="基本语法："></a>基本语法：</h4><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Outer</span><span class="token punctuation">&#123;</span><span class="token comment">//外部类</span>
+  <span class="token keyword">class</span> <span class="token class-name">Inner</span><span class="token punctuation">&#123;</span><span class="token comment">//内部类</span>
+    
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">class</span> <span class="token class-name">Other</span><span class="token punctuation">&#123;</span><span class="token comment">//外部其他类</span>
+  
+<span class="token punctuation">&#125;</span></code></pre></li>
+<li><h4 id="内部类分类："><a href="#内部类分类：" class="headerlink" title="内部类分类："></a>内部类分类：</h4><ol>
+<li>定义在外部类局部位置上：1局部类内部(有类名) 2.匿名局部类(没有类名⭐️)</li>
+<li>定义在外部类的成员位置上：1.成员内部类(无static修饰) 2.静态内部类(static修饰)</li>
+</ol>
+</li>
+</ul>
+<h3 id="8-8-1局部内部类"><a href="#8-8-1局部内部类" class="headerlink" title="8.8.1局部内部类"></a>8.8.1局部内部类</h3><ul>
+<li><h4 id="基本介绍：-8"><a href="#基本介绍：-8" class="headerlink" title="基本介绍："></a>基本介绍：</h4><p>局部内部类是定义在外部类的局部位置，在方法中、代码块中，并且有类名</p>
+</li>
+<li><h4 id="注意事项和细节：-7"><a href="#注意事项和细节：-7" class="headerlink" title="注意事项和细节："></a>注意事项和细节：</h4><ol>
+<li><p>可以直接访问外部类的所有成员，包含私有的</p>
+</li>
+<li><p>不能添加访问修饰符,但是可以使用final修饰</p>
+</li>
+<li><p>作用域：仅仅在定义它的方法或代码块中</p>
+</li>
+<li><p>内部类访问外部类：直接访问</p>
+</li>
+<li><p>外部类访问内部类：创建对象再访问</p>
+</li>
+<li><p>外部其他类访问局部内部类：不能访问</p>
+</li>
+<li><p>如果外部类和局部内部类的成员重名时，默认遵循就近原则，如果访问外部类的成员使用”外部类名.this.成员”去访问</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LocalInnerClass</span> <span class="token punctuation">&#123;</span><span class="token comment">//</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">//演示一遍</span>
+        <span class="token class-name">Outer02</span> outer02 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Outer02</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        outer02<span class="token punctuation">.</span><span class="token function">m1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"outer02的hashcode="</span> <span class="token operator">+</span> outer02<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">Outer02</span> <span class="token punctuation">&#123;</span><span class="token comment">//外部类</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> n1 <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">m2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Outer02 m2()"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span><span class="token comment">//私有方法</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">m1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token comment">//方法</span>
+        <span class="token comment">//1.局部内部类是定义在外部类的局部位置,通常在方法</span>
+        <span class="token comment">//3.不能添加访问修饰符,但是可以使用final 修饰</span>
+        <span class="token comment">//4.作用域 : 仅仅在定义它的方法或代码块中</span>
+        <span class="token keyword">final</span> <span class="token keyword">class</span> <span class="token class-name">Inner02</span> <span class="token punctuation">&#123;</span><span class="token comment">//局部内部类(本质仍然是一个类)</span>
+            <span class="token comment">//2.可以直接访问外部类的所有成员，包含私有的</span>
+            <span class="token keyword">private</span> <span class="token keyword">int</span> n1 <span class="token operator">=</span> <span class="token number">800</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                <span class="token comment">//5. 局部内部类可以直接访问外部类的成员，比如下面 外部类n1 和 m2()</span>
+                <span class="token comment">//7. 如果外部类和局部内部类的成员重名时，默认遵循就近原则，如果想访问外部类的成员，</span>
+                <span class="token comment">//   使用 外部类名.this.成员)去访问</span>
+                <span class="token comment">//    Outer02.this 本质就是外部类的对象, 即哪个对象调用了m1, Outer02.this就是哪个对象</span>
+                <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"n1="</span> <span class="token operator">+</span> n1 <span class="token operator">+</span> <span class="token string">" 外部类的n1="</span> <span class="token operator">+</span> <span class="token class-name">Outer02</span><span class="token punctuation">.</span><span class="token keyword">this</span><span class="token punctuation">.</span>n1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Outer02.this hashcode="</span> <span class="token operator">+</span> <span class="token class-name">Outer02</span><span class="token punctuation">.</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token function">m2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span>
+        <span class="token comment">//6. 外部类在方法中，可以创建Inner02对象，然后调用方法即可</span>
+        <span class="token class-name">Inner02</span> inner02 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Inner02</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        inner02<span class="token punctuation">.</span><span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre></li>
+</ol>
+</li>
+</ul>
+<h3 id="8-8-2匿名内部类⭐️⭐️"><a href="#8-8-2匿名内部类⭐️⭐️" class="headerlink" title="8.8.2匿名内部类⭐️⭐️"></a>8.8.2匿名内部类⭐️⭐️</h3><ul>
+<li><h4 id="基本介绍：-9"><a href="#基本介绍：-9" class="headerlink" title="基本介绍："></a>基本介绍：</h4><p>匿名内部类是定义在外部类的局部位置，比如方法中，并目没有类名，同时还是一个对象</p>
+</li>
+<li><h4 id="基本语法：-5"><a href="#基本语法：-5" class="headerlink" title="基本语法："></a>基本语法：</h4><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">new</span> 类或接口<span class="token punctuation">(</span>参数列表<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  类体<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre></li>
+<li><h4 id="底层："><a href="#底层：" class="headerlink" title="底层："></a>底层：</h4><ol>
+<li>本质： <strong>IA tiger</strong> = class Xxxx$1      class Xxxx$1 = <strong>new IA</strong> </li>
+<li>接口的底层：class Xxxx$1 <strong>implement</strong> IA{@Overide}</li>
+<li>本质： <strong>Father father</strong> = class Xxxx$2      class Xxxx$2 = <strong>new Father</strong> </li>
+<li>类的底层：class Xxxx$2 <strong>extends</strong> Father{@Overide}</li>
+</ol>
+</li>
+<li><h4 id="注意事项和细节：-8"><a href="#注意事项和细节：-8" class="headerlink" title="注意事项和细节："></a>注意事项和细节：</h4><ol>
+<li><p>匿名内部类既是一个类的定义同时本身也是一个对象,因此从语法上看，它既有定义类的特征，也有创建对象的特征</p>
+</li>
+<li><p>可以直接访问外部类的所有成员，包含私有的</p>
+</li>
+<li><p>不能添加访问修饰符,因为它的地位就是一个局部变量</p>
+</li>
+<li><p>作用域：仅仅在定义它的方法或代码块中</p>
+</li>
+<li><p>匿名内部类方位外部类成员：直接访问</p>
+</li>
+<li><p>外部其他类访问匿名内部类：不能访问</p>
+</li>
+<li><p>如果外部类和匿名内部类的成员重名时，匿名内部类访问的话，默认遵循就近原则，如果想访问外部类的成员，则可以使用 (外部类名.this.成员)去访问</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AnonymousInnerClass</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">Outer04</span> outer04 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Outer04</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        outer04<span class="token punctuation">.</span><span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Outer04</span> <span class="token punctuation">&#123;</span> <span class="token comment">//外部类</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> n1 <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span><span class="token comment">//属性</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token comment">//方法</span>
+        <span class="token comment">//基于接口的匿名内部类</span>
+        <span class="token comment">//</span>
+        <span class="token comment">//1.需求： 想使用IA接口,并创建对象</span>
+        <span class="token comment">//2.传统方式，是写一个类，实现该接口，并创建对象</span>
+        <span class="token comment">//3.需求是 Tiger/Dog 类只是使用一次，后面再不使用</span>
+        <span class="token comment">//4. 可以使用匿名内部类来简化开发</span>
+        <span class="token comment">//5. tiger的编译类型 ? IA</span>
+        <span class="token comment">//6. tiger的运行类型 ? 就是匿名内部类  Outer04$1</span>
+        <span class="token comment">/*
+            我们看底层 会分配 类名 Outer04$1
+            class Outer04$1 implements IA &#123;
+                @Override
+                public void cry() &#123;
+                    System.out.println("老虎叫唤...");
+                &#125;
+            &#125;
+         */</span>
+        <span class="token comment">//7. jdk底层在创建匿名内部类 Outer04$1,立即马上就创建了 Outer04$1实例，并且把地址</span>
+        <span class="token comment">//   返回给 tiger</span>
+        <span class="token comment">//8. 匿名内部类使用一次，就不能再使用</span>
+        <span class="token class-name">IA</span> tiger <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">IA</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">cry</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"老虎叫唤..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"tiger的运行类型="</span> <span class="token operator">+</span> tiger<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        tiger<span class="token punctuation">.</span><span class="token function">cry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//        IA tiger = new Tiger();</span>
+<span class="token comment">//        tiger.cry();</span>
+
+        <span class="token comment">//演示基于类的匿名内部类</span>
+        <span class="token comment">//分析</span>
+        <span class="token comment">//1. father编译类型 Father</span>
+        <span class="token comment">//2. father运行类型 Outer04$2</span>
+        <span class="token comment">//3. 底层会创建匿名内部类</span>
+        <span class="token comment">/*
+            class Outer04$2 extends Father&#123;
+                @Override
+                public void test() &#123;
+                    System.out.println("匿名内部类重写了test方法");
+                &#125;
+            &#125;
+         */</span>
+        <span class="token comment">//4. 同时也直接返回了 匿名内部类 Outer04$2的对象</span>
+        <span class="token comment">//5. 注意("jack") 参数列表会传递给 构造器</span>
+        <span class="token class-name">Father</span> father <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Father</span><span class="token punctuation">(</span><span class="token string">"jack"</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"匿名内部类重写了test方法"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"father对象的运行类型="</span> <span class="token operator">+</span> father<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//Outer04$2</span>
+        father<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//基于抽象类的匿名内部类</span>
+        <span class="token class-name">Animal</span> animal <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Animal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">void</span> <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"小狗吃骨头..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+        animal<span class="token punctuation">.</span><span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">interface</span> <span class="token class-name">IA</span> <span class="token punctuation">&#123;</span><span class="token comment">//接口</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">cry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">//class Tiger implements IA &#123;</span>
+<span class="token comment">//</span>
+<span class="token comment">//    @Override</span>
+<span class="token comment">//    public void cry() &#123;</span>
+<span class="token comment">//        System.out.println("老虎叫唤...");</span>
+<span class="token comment">//    &#125;</span>
+<span class="token comment">//&#125;</span>
+<span class="token comment">//class Dog implements  IA&#123;</span>
+<span class="token comment">//    @Override</span>
+<span class="token comment">//    public void cry() &#123;</span>
+<span class="token comment">//        System.out.println("小狗汪汪...");</span>
+<span class="token comment">//    &#125;</span>
+<span class="token comment">//&#125;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Father</span> <span class="token punctuation">&#123;</span><span class="token comment">//类</span>
+    <span class="token keyword">public</span> <span class="token class-name">Father</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token comment">//构造器</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"接收到name="</span> <span class="token operator">+</span> name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token comment">//方法</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Animal</span> <span class="token punctuation">&#123;</span> <span class="token comment">//抽象类</span>
+    <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code></pre>
+
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LocalInnerClassDetail</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">Outer03</span> outer03 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Outer03</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        outer03<span class="token punctuation">.</span><span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Outer03</span><span class="token punctuation">&#123;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> n1 <span class="token operator">=</span> <span class="token number">99</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token class-name">Person</span> person <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">hi</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"匿名内部类重写hi方法"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+        person<span class="token punctuation">.</span><span class="token function">hi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">hi</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"匿名内部类重写ok方法"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">ok</span><span class="token punctuation">(</span><span class="token class-name">String</span> str<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">ok</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">.</span><span class="token function">ok</span><span class="token punctuation">(</span><span class="token string">"jack"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Person</span><span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">hi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Person hi()"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">ok</span><span class="token punctuation">(</span><span class="token class-name">String</span> str<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Person ok()"</span><span class="token operator">+</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
+
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">InnerClassExercise02</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">CellPhone</span> cellPhone <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">CellPhone</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        cellPhone<span class="token punctuation">.</span><span class="token function">alarmclock</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Bell</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">ring</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+                <span class="token annotation punctuation">@Override</span>
+                <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"懒猪起床"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">interface</span> <span class="token class-name">Bell</span><span class="token punctuation">&#123;</span>
+    <span class="token keyword">void</span> <span class="token function">ring</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">CellPhone</span><span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">alarmClock</span><span class="token punctuation">(</span><span class="token class-name">Bell</span> bell<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        bell<span class="token punctuation">.</span><span class="token function">ring</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre></li>
+</ol>
+</li>
+</ul>
+<h3 id="8-8-3成员内部类"><a href="#8-8-3成员内部类" class="headerlink" title="8.8.3成员内部类"></a>8.8.3成员内部类</h3><ul>
+<li><h4 id="基本介绍：-10"><a href="#基本介绍：-10" class="headerlink" title="基本介绍："></a>基本介绍：</h4><p>成员内部类是定义在外部类的成员位置，并且没有static修饰</p>
+</li>
+<li><h4 id="注意事项和细节：-9"><a href="#注意事项和细节：-9" class="headerlink" title="注意事项和细节："></a>注意事项和细节：</h4><ol>
+<li><p>可以直接访问外部类的所有成员，包含私有的</p>
+</li>
+<li><p>可以添加任意访问修饰符</p>
+</li>
+<li><p>作用域：为整个外部类类体</p>
+</li>
+<li><p>成员内部类访问外部类：直接访问</p>
+</li>
+<li><p>外部类访问成员内部类；创建对象，再访问</p>
+</li>
+<li><p>外部其他类访问成员内部类：</p>
+<ul>
+<li><p>外部类.内部类  引用名 = 外部对象.new 内部类();</p>
+</li>
+<li><p>外部类.内部类  引用名 = <strong>外部对象</strong>.get();</p>
+<!--需要创建外部类对象实例，get()为内部类返回对象的方法--></li>
+</ul>
+</li>
+<li><p>如果外部类和成员内部类的成员重名时，成员内部类访问的话，默认遵循就近原则，如果想访问外部类的成员，则可以使用 (外部类名.this.成员)去访问</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MemberInnerClass01</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">Outer08</span> outer08 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Outer08</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        outer08<span class="token punctuation">.</span><span class="token function">t1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//外部其他类，使用成员内部类的三种方式</span>
+        <span class="token comment">//</span>
+        <span class="token comment">// 第一种方式</span>
+        <span class="token comment">// outer08.new Inner08(); 相当于把 new Inner08()当做是outer08成员</span>
+        <span class="token comment">// 这就是一个语法，不要特别的纠结.</span>
+        <span class="token class-name">Outer08<span class="token punctuation">.</span>Inner08</span> inner08 <span class="token operator">=</span> outer08<span class="token punctuation">.</span><span class="token keyword">new</span> <span class="token class-name">Inner08</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        inner08<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 第二方式 在外部类中，编写一个方法，可以返回 Inner08对象</span>
+        <span class="token class-name">Outer08<span class="token punctuation">.</span>Inner08</span> inner08Instance <span class="token operator">=</span> outer08<span class="token punctuation">.</span><span class="token function">getInner08Instance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        inner08Instance<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Outer08</span> <span class="token punctuation">&#123;</span> <span class="token comment">//外部类</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> n1 <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> name <span class="token operator">=</span> <span class="token string">"张三"</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">hi</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"hi()方法..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token comment">//1.注意: 成员内部类，是定义在外部内的成员位置上</span>
+    <span class="token comment">//2.可以添加任意访问修饰符(public、protected 、默认、private),因为它的地位就是一个成员</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Inner08</span> <span class="token punctuation">&#123;</span><span class="token comment">//成员内部类</span>
+        <span class="token keyword">private</span> <span class="token keyword">double</span> sal <span class="token operator">=</span> <span class="token number">99.8</span><span class="token punctuation">;</span>
+        <span class="token keyword">private</span> <span class="token keyword">int</span> n1 <span class="token operator">=</span> <span class="token number">66</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">say</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token comment">//可以直接访问外部类的所有成员，包含私有的</span>
+            <span class="token comment">//如果成员内部类的成员和外部类的成员重名，会遵守就近原则.</span>
+            <span class="token comment">//，可以通过  外部类名.this.属性 来访问外部类的成员</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"n1 = "</span> <span class="token operator">+</span> n1 <span class="token operator">+</span> <span class="token string">" name = "</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token string">" 外部类的n1="</span> <span class="token operator">+</span> <span class="token class-name">Outer08</span><span class="token punctuation">.</span><span class="token keyword">this</span><span class="token punctuation">.</span>n1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">hi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token comment">//方法，返回一个Inner08实例</span>
+    <span class="token keyword">public</span> <span class="token class-name">Inner08</span> <span class="token function">getInner08Instance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Inner08</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    
+    <span class="token comment">//写方法</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">t1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">//使用成员内部类</span>
+        <span class="token comment">//创建成员内部类的对象，然后使用相关的方法</span>
+        <span class="token class-name">Inner08</span> inner08 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Inner08</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        inner08<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>inner08<span class="token punctuation">.</span>sal<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre></li>
+</ol>
+</li>
+</ul>
+<h3 id="8-8-4静态内部类"><a href="#8-8-4静态内部类" class="headerlink" title="8.8.4静态内部类"></a>8.8.4静态内部类</h3><ul>
+<li><h4 id="基本介绍：-11"><a href="#基本介绍：-11" class="headerlink" title="基本介绍："></a>基本介绍：</h4><p>静态内部类是定义在外部类的成员位置，并且有static修饰</p>
+</li>
+<li><h4 id="注意事项和细节：-10"><a href="#注意事项和细节：-10" class="headerlink" title="注意事项和细节："></a>注意事项和细节：</h4><ol>
+<li><p>可以直接访问外部类的所有静态成员，包含私有的，但不能直接访问非静态成员</p>
+</li>
+<li><p>可以添加任意访问修饰符</p>
+</li>
+<li><p>作用域：整个外部类类体</p>
+</li>
+<li><p>静态内部类访问外部类：直接访问</p>
+</li>
+<li><p>外部类访问静态内部类：创建对象，再访问</p>
+</li>
+<li><p>外部其他类访问静态内部类：</p>
+<ul>
+<li><p>外部类.内部类  引用名 = new 外部类.内部类();</p>
+</li>
+<li><p>外部类.内部类  引用名 = <strong>外部对象</strong>.get();</p>
+<!--需要创建外部类对象实例，get()为内部类返回对象的方法--></li>
+<li><p>外部类.内部类  引用名 = <strong>外部类</strong>.get();</p>
+<!--不需要创建外部类对象实例--></li>
+</ul>
+</li>
+<li><p>如果外部类和静态内部类的成员重名时，静态内部类访问的话，默认遵循就近原则，如果想访问外部类的成员，则可以使用 (外部类名.this.成员)去访问</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">StaticInnerClass01</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">Outer10</span> outer10 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Outer10</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        outer10<span class="token punctuation">.</span><span class="token function">m1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//外部其他类 使用静态内部类</span>
+        <span class="token comment">//方式1</span>
+        <span class="token comment">//因为静态内部类，是可以通过类名直接访问(前提是满足访问权限)</span>
+        <span class="token class-name">Outer10<span class="token punctuation">.</span>Inner10</span> inner10 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Outer10<span class="token punctuation">.</span>Inner10</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        inner10<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//方式2</span>
+        <span class="token comment">//编写一个方法，可以返回静态内部类的对象实例.</span>
+        <span class="token class-name">Outer10<span class="token punctuation">.</span>Inner10</span> inner101 <span class="token operator">=</span> outer10<span class="token punctuation">.</span><span class="token function">getInner10</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"============"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        inner101<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">Outer10<span class="token punctuation">.</span>Inner10</span> inner10_ <span class="token operator">=</span> <span class="token class-name">Outer10</span><span class="token punctuation">.</span><span class="token function">getInner10_</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"************"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        inner10_<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Outer10</span> <span class="token punctuation">&#123;</span> <span class="token comment">//外部类</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> n1 <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">String</span> name <span class="token operator">=</span> <span class="token string">"张三"</span><span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">cry</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+    <span class="token comment">//Inner10就是静态内部类</span>
+    <span class="token comment">//1. 放在外部类的成员位置</span>
+    <span class="token comment">//2. 使用static 修饰</span>
+    <span class="token comment">//3. 可以直接访问外部类的所有静态成员，包含私有的，但不能直接访问非静态成员</span>
+    <span class="token comment">//4. 可以添加任意访问修饰符(public、protected 、默认、private),因为它的地位就是一个成员</span>
+    <span class="token comment">//5. 作用域 ：同其他的成员，为整个类体</span>
+    <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">Inner10</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">String</span> name <span class="token operator">=</span> <span class="token string">"韩顺平教育"</span><span class="token punctuation">;</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">say</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token comment">//如果外部类和静态内部类的成员重名时，静态内部类访问的时，</span>
+            <span class="token comment">//默认遵循就近原则，如果想访问外部类的成员，则可以使用 (外部类名.成员)</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>name <span class="token operator">+</span> <span class="token string">" 外部类name= "</span> <span class="token operator">+</span> <span class="token class-name">Outer10</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">cry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">m1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">//外部类---访问------>静态内部类 访问方式：创建对象，再访问</span>
+        <span class="token class-name">Inner10</span> inner10 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Inner10</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        inner10<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">Inner10</span> <span class="token function">getInner10</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Inner10</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">Inner10</span> <span class="token function">getInner10_</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Inner10</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre></li>
+</ol>
+</li>
+</ul>
+<h2 id="8-9类加载顺序⭐️⭐️"><a href="#8-9类加载顺序⭐️⭐️" class="headerlink" title="8.9类加载顺序⭐️⭐️"></a>8.9类加载顺序⭐️⭐️</h2><ul>
+<li><h4 id="类什么时候被加载："><a href="#类什么时候被加载：" class="headerlink" title="类什么时候被加载："></a>类什么时候被加载：</h4><ul>
+<li>创建对象实例时</li>
+<li>创建子类对象实例时，父类也会被加载</li>
+<li>使用类的静态成员时</li>
+</ul>
+</li>
+<li><h4 id="创建一个对象时，在一个类的调用顺序："><a href="#创建一个对象时，在一个类的调用顺序：" class="headerlink" title="创建一个对象时，在一个类的调用顺序："></a>创建一个对象时，在一个类的调用<strong>顺序</strong>：</h4><ol>
+<li><p>调用静态代码块和静态属性初始化(注意：静态代码块和静态属性初始化调用的优先级样，如果有多个静态代码块和多个静</p>
+<p>态变量初始化，则按他们定义的顺序调</p>
+</li>
+<li><p>调用普通代码块和普通属性的初始化(注意：普通代码块和普通属性初始化调用的优先级一样，若果有多个普通代码块和多个普通属性初始化，则按定义顺序调用)</p>
+</li>
+<li><p>调用构造方法</p>
+</li>
+</ol>
+</li>
+<li><h4 id="创建子类时顺序："><a href="#创建子类时顺序：" class="headerlink" title="创建子类时顺序："></a>创建子类时顺序：</h4><ol>
+<li>父类的静态代码块和静态属性(优先级一样，按定义顺序执行)</li>
+<li>子类的静态代码块和静态属性(优先级一样，按定义顺序执行)</li>
+<li>父类的普通代码块和普通属性初始化(优先级一样，按定义顺序执行)</li>
+<li>父类构造方法</li>
+<li>子类的普通代码块和普通属性初始化(优先级一样，按定义顺序执行)</li>
+<li>子类构造方法</li>
+</ol>
+</li>
+</ul>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">junmtdh</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://junmtdh.fhawk.cn/2022/06/25/8-mian-xiang-dui-xiang-gao-ji/">https://junmtdh.fhawk.cn/2022/06/25/8-mian-xiang-dui-xiang-gao-ji/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">junmtdh</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/java/">
+                                    <span class="chip bg-color">java</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: null,
+        id: '2022-06-25T22-19-00',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2022/06/28/9-mei-ju-he-zhu-jie/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="9.枚举和注解">
+                        
+                        <span class="card-title">9.枚举和注解</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-06-28
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/java%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    java基础
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/05/23/7-mian-xiang-dui-xiang-zhong-ji/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="7.面向对象(中级)">
+                        
+                        <span class="card-title">7.面向对象(中级)</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/java%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    java基础
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: junmtdh<br />'
+            + '文章作者: junmtdh<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        font-size: 15px;
+        color: blue;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="tencent"
+                   type="playlist"
+                   id="6919101057"
+                   fixed='true'
+                   autoplay='true'
+                   theme='blue'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021-2024</span>
+            
+            <span id="year">2021</span>
+            <a href="/about" target="_blank">junmtdh</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+            <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="http://beian.miit.gov.cn/" target="_blank">沪ICP备18037784号-1</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/junmtdh" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:841571891@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=841571891" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 841571891" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+
+</footer>
+
+<div class="progress-bar"></div>
+
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+    <!-- 天气接口 -->
+    
+        <!-- 天气接口-->
+<script type="text/javascript">
+    WIDGET = {FID: '1tFpFZ5Mtj'}
+  </script>
+<script type="text/javascript">
+    //只在桌面版网页启用特效
+    var windowWidth = $(window).width();
+    if (windowWidth > 768) {
+        document.write('<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"><\/script>');
+        }
+  </script>
+
+      
+
+    <!-- 动态标题 -->
+      <script type="text/javascript"> var OriginTitile = document.title, st;
+        document.addEventListener("visibilitychange", function () { document.hidden ? (document.title = "虽不能至~心往向之~", clearTimeout(st)) : (document.title = "φ(゜▽゜*)♪嘻,你好吖~!", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) }) </script>
+
+    <!-- 鼠标点击特效  爱生活爱学习 -->
+      <script type="text/javascript" src="/js/click_show_text.js"></script>
+
+
+
+    <!-- 雪花特效 -->
+    <script type="text/javascript" src="\js\snow.js"></script>
+    
+</body>
+
+</html>
