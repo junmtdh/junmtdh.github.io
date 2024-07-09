@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <video id="PlayVideo" src="../img/video.mp4" autoplay muted class="bj"
+   style="width:100%;display:block;margin:0px auto;height:100%;"></video>
+
+</head>
+<body>
+
+<script type="text/JavaScript">
+            myVid=document.getElementById("PlayVideo");
+            myVid.addEventListener('ended',function(){undefined
+                window.location.href="./index.html";
+            });
+// window.location.href="" 填写需要跳转的地址
+</script>
+
+</body>
+</html>
